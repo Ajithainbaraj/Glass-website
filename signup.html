@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up – GlassMart</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Poppins, sans-serif;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      background: url(https://www.shutterstock.com/image-photo/modern-bright-city-view-through-260nw-1488734360.jpg) no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: white;
+    }
+    .container {
+      background-color: rgba(0, 0, 0, 0.85);
+      padding: 2rem;
+      border-radius: 12px;
+      width: 350px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    input, button {
+      width: 100%;
+      padding: 0.75rem;
+      margin: 10px 0;
+      border-radius: 6px;
+      border: none;
+    }
+    button {
+      background-color: #f5c518;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    a { color: #f5c518; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Create Account</h2>
+  <form id="userForm">
+    <input type="text" name="name" placeholder="Full Name" required />
+    <input type="email" name="email" placeholder="Email" required />
+    <input type="password" name="password" placeholder="Password" required />
+    <button type="submit">Create Account</button>
+  </form>
+  <div style="text-align:center;">Already have an account? <a href="./log in.html">Login</a></div>
+</div>
+
+<script>
+  document.getElementById("userForm").addEventListener("submit", function (event) {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    const newEntry = {};
+    formData.forEach((value, key) => {
+      newEntry[key] = value.trim();
+    });
+
+    const existingData = JSON.parse(localStorage.getItem("formResponse")) || [];
+    
+    // Optional: check if email already exists
+    const duplicate = existingData.find(user => user.email === newEntry.email);
+    if (duplicate) {
+      alert("Email already registered. Please log in.");
+      return;
+    }
+
+    existingData.push(newEntry);
+    localStorage.setItem("formResponse", JSON.stringify(existingData));
+    alert("Account created successfully!");
+    event.target.reset();
+    window.location.href = "index.html";
+  });
+</script>
+
+</body>
+</html>

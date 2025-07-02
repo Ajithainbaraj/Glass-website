@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GlassMart – Shop</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: url(https://www.shutterstock.com/image-photo/modern-bright-city-view-through-260nw-1488734360.jpg) no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+
+    .navbar {
+      background-color: black;
+    }
+
+    .navbar-brand, .nav-link {
+      color: #fff !important;
+      font-weight: 500;
+    }
+
+    .nav-link:hover {
+      color: #ffc107 !important;
+    }
+
+    .page-title {
+      text-align: center;
+      padding: 4rem 1rem;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .page-title h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #ffc107;
+    }
+
+    .page-title p {
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      padding: 3rem 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .product-card {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.4);
+      transition: 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .product-content {
+      padding: 1rem;
+      text-align: center;
+      color: #000;
+    }
+
+    .product-title {
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+
+    .product-price {
+      color: #f39c12;
+      font-weight: bold;
+      margin: 0.5rem 0;
+    }
+
+    .btn-buy {
+      border-radius: 50px;
+      font-weight: 500;
+      padding: 6px 20px;
+      background-color: #000;
+      color: #fff;
+      border: none;
+      
+    }
+    .btn-cart {
+      background-color:  #ffc107;
+    }
+
+    .btn-cart:hover {
+      background-color: white ;
+      color: #000;
+    }
+
+    .footer {
+      background-color: black;
+      color: #ccc;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    @media(max-width: 600px){
+      .product-card img {
+        height: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">GlassMart</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon bg-light"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="./glass.html">Smartview Edge</a></li>
+        <li class="nav-item"><a class="nav-link" href="./sunglass.html">Sunglasses</a></li>
+        <li class="nav-item"><a class="nav-link" href="./about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="./contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="./cart.html">Cart</a></li>
+        <li class="nav-item"><a class="nav-link" href="./log in.html">login</a></li>
+        <li class="nav-item"><a class="nav-link" href="./signup.html">Signup</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="page-title">
+  <h1>Smartview Edge</h1>
+  <p>Stylish, comfortable & affordable eyewear just for you.</p>
+</section>
+
+<section class="grid-container">
+  <div class="product-card">
+    <img src="https://d3995ea24pmi7m.cloudfront.net/media/catalog/product/F/V/FVO4315I513551_1_lar.jpg" alt="Vogue Eyewear" style="width:100%; height:280px; object-fit:contain;">
+    <div class="product-content">
+      <div class="product-title">Vogue Eyewear</div>
+      <div class="product-price">₹2000</div>
+      <div class="d-flex justify-content-center gap-2 mt-2">
+        <button class="btn btn-buy">Buy Now</button>
+        <button class="btn btn-cart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+  <div class="product-card">
+    <img src="https://d3995ea24pmi7m.cloudfront.net/media/catalog/product/F/S/FSI20128F52053_1_lar.jpg" alt="Emporio Armani" style="width:100%; height:280px; object-fit:contain;">
+    <div class="product-content">
+      <div class="product-title">Emporio Armani</div>
+      <div class="product-price">₹3000</div>
+      <div class="d-flex justify-content-center gap-2 mt-2">
+        <button class="btn btn-buy">Buy Now</button>
+        <button class="btn btn-cart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+  <div class="product-card">
+    <img src="https://d3995ea24pmi7m.cloudfront.net/media/catalog/product/F/V/FVO5617292455_1_lar.jpg" alt="Sunset Shades" style="width:100%; height:280px; object-fit:contain;">
+    <div class="product-content">
+      <div class="product-title">Sunset Shades</div>
+      <div class="product-price">₹1799</div>
+      <div class="d-flex justify-content-center gap-2 mt-2">
+        <button class="btn btn-buy">Buy Now</button>
+        <button class="btn btn-cart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+  <div class="product-card">
+    <img src="https://d3995ea24pmi7m.cloudfront.net/media/catalog/product/F/V/FVO4263513750_1_lar.jpg" alt="Tees By Fastrack" style="width:100%; height:280px; object-fit:contain;">
+    <div class="product-content">
+      <div class="product-title">Tees By Fastrack</div>
+      <div class="product-price">₹3000</div>
+      <div class="d-flex justify-content-center gap-2 mt-2">
+        <button class="btn btn-buy">Buy Now</button>
+        <button class="btn btn-cart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+  <div class="product-card">
+    <img src="https://d3995ea24pmi7m.cloudfront.net/media/catalog/product/T/C/TC1070UFM1MBRV_1_lar.jpg" alt="Burberry" style="width:100%; height:280px; object-fit:contain;">
+    <div class="product-content">
+      <div class="product-title">Burberry</div>
+      <div class="product-price">₹2000</div>
+      <div class="d-flex justify-content-center gap-2 mt-2">
+        <button class="btn btn-buy">Buy Now</button>
+        <button class="btn btn-cart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+  <div class="product-card">
+    <img src="https://d3995ea24pmi7m.cloudfront.net/media/catalog/product/F/T/FTH6333C348_1_lar.jpg" alt="Urban Style" style="width:100%; height:280px; object-fit:contain;">
+    <div class="product-content">
+      <div class="product-title">Urban Style</div>
+      <div class="product-price">₹2000</div>
+      <div class="d-flex justify-content-center gap-2 mt-2">
+        <button class="btn btn-buy">Buy Now</button>
+        <button class="btn btn-cart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+  <div class="product-card">
+    <img src="https://d3995ea24pmi7m.cloudfront.net/media/catalog/product/f/t/ft1416wfp3sgrv_1_lar.jpg" alt="Square Matte" style="width:100%; height:280px; object-fit:contain;">
+    <div class="product-content">
+      <div class="product-title">Square Matte</div>
+      <div class="product-price">₹4000</div>
+      <div class="d-flex justify-content-center gap-2 mt-2">
+        <button class="btn btn-buy">Buy Now</button>
+        <button class="btn btn-cart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+  <div class="product-card">
+    <img src="https://d3995ea24pmi7m.cloudfront.net/media/catalog/product/T/S/TSR0047UFC2MBRTV_1_lar.jpg" alt="Pure Transparent" style="width:100%; height:280px; object-fit:contain;">
+    <div class="product-content">
+      <div class="product-title">Pure Transparent</div>
+      <div class="product-price">₹5000</div>
+      <div class="d-flex justify-content-center gap-2 mt-2">
+        <button class="btn btn-buy">Buy Now</button>
+        <button class="btn btn-cart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+  <div class="product-card">
+    <img src="https://d3995ea24pmi7m.cloudfront.net/media/catalog/product/T/C/TC1234UFM1SDGGYV_11_lar.jpg" alt="Blue Light Block" style="width:100%; height:280px; object-fit:contain;">
+    <div class="product-content">
+      <div class="product-title">Blue Light Block</div>
+      <div class="product-price">₹5000</div>
+      <div class="d-flex justify-content-center gap-2 mt-2">
+        <button class="btn btn-buy">Buy Now</button>
+        <button class="btn btn-cart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+  <div class="product-card">
+    <img src="https://d3995ea24pmi7m.cloudfront.net/media/catalog/product/T/S/TSR0023WHM3MBKTV_1_lar.jpg" alt="Elegant Tortoise" style="width:100%; height:280px; object-fit:contain;">
+    <div class="product-content">
+      <div class="product-title">Elegant Tortoise</div>
+      <div class="product-price">₹3000</div>
+      <div class="d-flex justify-content-center gap-2 mt-2">
+        <button class="btn btn-buy">Buy Now</button>
+        <button class="btn btn-cart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer class="footer">
+  <p>© 2025 GlassMart. All rights reserved.</p>
+</footer>
+
+<script>
+  // Buy Now alert
+  document.querySelectorAll('.btn-buy').forEach(button => {
+    button.addEventListener('click', function () {
+      const title = this.closest('.product-card').querySelector('.product-title').textContent;
+      alert(`🛍️ You selected to BUY: ${title}`);
+    });
+  });
+
+  // Add to Cart functionality
+  document.querySelectorAll('.btn-cart').forEach(button => {
+    button.addEventListener('click', function () {
+      const card = this.closest('.product-card');
+      const title = card.querySelector('.product-title').textContent;
+      const price = card.querySelector('.product-price').textContent;
+      const image = card.querySelector('img').src;
+
+      const product = { title, price, image };
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+      const exists = cart.find(item => item.title === title);
+      if (!exists) {
+        cart.push(product);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        alert(`✅ ${title} added to your cart!`);
+      } else {
+        alert(`🛒 ${title} is already in your cart.`);
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
